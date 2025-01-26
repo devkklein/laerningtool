@@ -1,0 +1,14 @@
+model Card {
+  id        Int      @id @default(autoincrement())
+  frontText String   @db.LongText
+  backText  String   @db.LongText
+  cardNumber Int     @unique
+  deckName  String
+  deck      Deck     @relation(fields: [deckName], references: [name])
+}
+
+model Deck {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  cards Card[] 
+}

@@ -1,0 +1,19 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["prismaSchemaFolder"]
+}
+
+datasource db {
+  provider = "mysql"
+
+  url = env("DATABASE_URL")
+
+  // This environment variable can be the same as `DATABASE_URL` for non-pglite environments
+  directUrl = env("DATABASE_URL")
+
+  // This is required for development only.
+  
+}
