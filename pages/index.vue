@@ -12,7 +12,10 @@
           >
             Sign in to your account
           </h1>
-          <form class="space-y-4 md:space-y-6" @submit.prevent="signIn('credentials', { username, password })">
+          <form
+            class="space-y-4 md:space-y-6"
+            @submit.prevent="signIn('credentials', { username, password })"
+          >
             <div>
               <label
                 for="text"
@@ -20,14 +23,14 @@
                 >Your Username</label
               >
               <input
+                id="text"
                 v-model="username"
                 type="text"
                 name="text"
-                id="text"
                 class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name.lastname"
                 required
-              />
+              >
             </div>
             <div>
               <label
@@ -36,14 +39,14 @@
                 >Password</label
               >
               <input
+                id="password"
                 v-model="password"
                 type="password"
                 name="password"
-                id="password"
                 placeholder="••••••••"
                 class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
-              />
+              >
             </div>
             <div>
               <button
@@ -53,7 +56,6 @@
                 Sign in
               </button>
             </div>
-            
           </form>
         </div>
       </div>
@@ -65,11 +67,9 @@
 import { ref, computed } from "vue";
 import { definePageMeta } from "#imports";
 
-
-
 definePageMeta({
-  auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: '/admin' }
-})
+  auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: "/admin" },
+});
 
 const { status, signIn } = useAuth();
 

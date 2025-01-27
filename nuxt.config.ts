@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  
   dev: true,
   modules: [
     "@nuxtjs/tailwindcss",
@@ -7,7 +9,13 @@ export default defineNuxtConfig({
     "@sidebase/nuxt-auth",
     "@nuxt/icon",
     "@nuxt/eslint",
+    "@pinia/nuxt",
+     
   ],
+  imports: {
+    dirs: ['stores']
+},
+
   build: {
     transpile: ["trpc-nuxt"],
   },
@@ -28,4 +36,5 @@ export default defineNuxtConfig({
       collections: ["uli", "mdi", "guidance"],
     },
   },
+  
 });
