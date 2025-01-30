@@ -7,7 +7,6 @@ export default defineEventHandler(async (event) => {
 
   const body = await readBody(event)
   const { frontText, backText, deckName, cardNumber } = body
-  console.log(body)
 
   
 
