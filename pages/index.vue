@@ -12,7 +12,10 @@
           >
             Sign in to your account
           </h1>
-          <form class="space-y-4 md:space-y-6" @submit.prevent="signIn('credentials', { username, password })">
+          <form
+            class="space-y-4 md:space-y-6"
+            @submit.prevent="signIn('credentials', {username: username,password: password, callbackUrl: '/app/home' })"
+          >
             <div>
               <label
                 for="text"
@@ -53,7 +56,6 @@
                 Sign in
               </button>
             </div>
-            
           </form>
         </div>
       </div>
@@ -65,11 +67,9 @@
 import { ref, computed } from "vue";
 import { definePageMeta } from "#imports";
 
-
-
 definePageMeta({
-  auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: '/admin' }
-})
+  auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: "/app/home" },
+});
 
 const { status, signIn } = useAuth();
 
