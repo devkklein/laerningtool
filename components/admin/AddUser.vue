@@ -4,9 +4,9 @@
     <div class="flex flex-col">
       <label for="name">Name</label>
       <input
+        id="name"
         v-model="username"
         type="text"
-        id="name"
         class="border border-gray-200 rounded-lg p-1"
       />
     </div>
@@ -14,17 +14,17 @@
     <div class="flex flex-col">
       <label for="password">Password</label>
       <input
+        id="password"
         v-model="password"
         type="password"
-        id="password"
         class="border border-gray-200 rounded-lg p-1"
       />
     </div>
     <div class="flex flex-col">
       <label for="role">Role</label>
       <select
-        v-model="role"
         id="role"
+        v-model="role"
         class="border border-gray-200 rounded-lg p-1"
       >
         <option value="admin">Admin</option>
@@ -32,7 +32,7 @@
       </select>
     </div>
     <div class="flex flex-col">
-      <button @click="addUser" class="bg-blue-500 text-white p-2 rounded-lg">
+      <button class="bg-blue-500 text-white p-2 rounded-lg" @click="addUser">
         Add User
       </button>
     </div>

@@ -4,19 +4,17 @@
       v-for="deck in decks"
       :key="deck.id"
       class="border border-gray-300 p-4 rounded-lg w-52 hover:border-blue-500 cursor-pointer"
-      v-on:click="selcetCard(deck.id)"
-      >
+      @click="selcetCard(deck.id)"
+    >
       <NuxtLink to="">
-        
-      <h3>{{ deck.name }}</h3>
-    </NuxtLink>
+        <h3>{{ deck.name }}</h3>
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref, onMounted } from "vue";
-
 
 interface Deck {
   id: number;
@@ -54,8 +52,4 @@ const selcetCard = (cardId: number) => {
 onMounted(() => {
   fetchDecks();
 });
-
-
-
-
 </script>
