@@ -23,8 +23,8 @@
         </router-link>
 
         <button
-          @click="signOut()"
           class="p-2 mt-auto hover:border-blue-500 w-full text-center border border-grey"
+          @click="signOut()"
         >
           <Icon name="mdi:logout" size="24" color="white" />
         </button>

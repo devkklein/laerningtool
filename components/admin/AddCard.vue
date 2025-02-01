@@ -12,7 +12,7 @@
             class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm focus:outline-none min-h-40"
             rows="3"
             spellcheck="true"
-          ></textarea>
+          />
         </div>
         <div>
           <label for="backText" class="block text-sm font-medium text-gray-700"
@@ -24,13 +24,13 @@
             class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm focus:outline-none min-h-56"
             rows="3"
             spellcheck="true"
-          ></textarea>
+          />
         </div>
         <div class="flex flex-col">
           <label for="role">Thema</label>
           <select
-            v-model="deckName"
             id="role"
+            v-model="deckName"
             class="border border-gray-200 rounded-lg p-1"
           >
             <option value="uform">Uform</option>
@@ -43,9 +43,9 @@
             >Kartennummer</label
           >
           <input
-            type="number"
             id="cardNumber"
             v-model="cardNumber"
+            type="number"
             class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm focus:outline-none"
           />
         </div>
